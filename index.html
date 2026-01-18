@@ -18,33 +18,65 @@
     <div class="main-container">
         <header>
             <div class="container_header">
-                <div class = "container_header_logo_text">
-                    <img src="images/logo/Booki.png" alt="logo_booki" class = "logo_header container_header" >
-                        <div class = "container_header_text">
-                            <h2 class = "header_title">
-                            <p class = "section-title">Trouvez votre hébergement pour des vacances de rêve</p>
-                            </h2>
-                            <p>En plein centre-ville ou en pleine nature</p>
-                        </div>
-                        <div>
-                             <form method="get" action="">
-                                <p class = "research_container">
-                                    <img src ="images/assets/Group 15.png" alt = "pin"><input type="text" name = "Localisation" placeholder="rechercher" class = "reseach_text"><img src ="images/assets/research_Desktop.png" alt = "research_desktop">
-                                </p>
-                            </form>
-                        </div>
+                <div class = "logo_container">
+                    <img src="images/logo/Booki.png" alt="logo_booki" class = "logo_header" > 
                 </div>
-                <div class="container_header_button">
+                <div class = "container_header_button">
                     <a href="Hébergements.html" class = "button_header">Hébergements</a>
                     <a href="Activités.html" class = "button_header">Activités</a>
                 </div>
             </div>
-            <div>
+        </header>
+        <infogroup class = "container_infogroup">
+            <div class ="container_headine">
+                <p class ="headline_title">Trouvez votre hébergement pour des vacances de rêve</p>
+                <p class = "headline_subtitle">En plein centre-ville ou en pleine nature</p>
+            </div>
+            <div class = "container_search_bar" >
+                <div class = "pin_map">
+                    <img src = "images/assets/Vector.png" alt ="pin">
+                </div>
+                <div>
+                    <form method="get" action="">
+                        <p >
+                            <input type="text" name = "Localisation" placeholder="Marseille,France" class = "research_container">
+                        </p>
+                    </form>
+                </div>
+                <div class = "research_button">
+                        <p class="research_button_text">Rechercher</p>
+                </div>
+
+            </div>
+            <div class = "container_filter_bar">
+                <p class="filter_text">Filtres</p>
+                <div class="filter_economic">
+                    <img src = "images/assets/Cash.png" alt = "Cash">
+                    <p class="filter_economic_text">Économique</p>
+                </div>
+                <div class="filter_family">
+                    <img src ="images/assets/Family.png" alt =Family>
+                    <p class="filter_family_text">Familial</p>
+                </div>
+                <div class="filter_romantic">
+                    <img src ="images/assets/Romantic.png" alt =Romantic>
+                    <p class="filter_romantic_text">Romantique</p>
+                </div>
+                <div class="filter_hype">
+                    <img src ="images/assets/Hype.png" alt =Hype>
+                    <p class="filter_hype_text">Nos pépites</p>
+                </div>
 
 
             </div>
-            
-        </header>
+            <div class="container_infobar">
+                <div class="border_info">
+                    <img src ="images/assets/Info.png" alt = "info" class = "border_info_I">
+                </div>
+                <p class="align_info_text">Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </infogroup>
+
         <main>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
