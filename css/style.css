@@ -40,6 +40,8 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    box-sizing: border-box;
+
 }
 
 .card img {
@@ -154,6 +156,9 @@ a {
     background-color: #F2F2F2;
 }
 
+.pin{
+    color: black;
+}
 
 .research_button{
     display: flex;
@@ -191,8 +196,12 @@ a {
 
 .container_filter_bar{
     display: flex;
+    list-style: none;
+    margin: 0;          /*De base, margin est à 40px*/
+    padding: 0;         /*De base, padding est à 40px*/
     width: 758px;
     height: 50px;
+    gap: 15px;
 
 }
 
@@ -202,131 +211,35 @@ a {
 }
 
 
-/****** infogroup_eco_button***********/
-
-
-
-.filter_economic{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 173px;
-    border : 2px solid #D9D9D9;
-    margin-top: 4px;
-    margin-right: 10px;
-    margin-top: 4px;
-    margin-left: 10px;
-    border-radius: 25px;
-    gap: 10px;
-
+.filter_logo{
+    font-size: 1.5em;
 }
 
-.filter_economic:hover{
-    background-color: #DEEBFF;
-}
-
-.filter_economic_text{
-    height: 20px;
-    width: 103px;
+.filter_font_size{
     font-size: 17px;
     font-weight: 700;
 }
 
-
-/****** infogroup_family_button***********/
-
-
-
-.filter_family{
-    display: flex;
+.filter_button{
+    display: inline-flex; /*adapter la taille au contenu*/
+    height: 50px;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 134px;
+    padding-top: 4px;
+    padding-right: 19px;
+    padding-bottom: 4px;
+    padding-left: 19px;
+    border-radius: 25px;
     border : 2px solid #D9D9D9;
     margin-top: 4px;
-    margin-right: 10px;
-    margin-top: 4px;
-    margin-left: 10px;
-    border-radius: 25px;
     gap: 10px;
 
 }
 
-.filter_family:hover{
+.filter_button:hover{
     background-color: #DEEBFF;
 }
 
-.filter_family_text{
-    height: 20px;
-    width: 64px;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-
-/****** infogroup_Romantic_button***********/
-
-
-
-.filter_romantic{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 170px;
-    border : 2px solid #D9D9D9;
-    margin-top: 4px;
-    margin-right: 10px;
-    margin-top: 4px;
-    margin-left: 10px;
-    border-radius: 25px;
-    gap: 10px;
-
-}
-
-.filter_romantic:hover{
-    background-color: #DEEBFF;
-}
-
-.filter_romantic_text{
-    height: 20px;
-    width: 100px;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-
-/****** infogroup_hype_button***********/
-
-
-.filter_hype{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 167px;
-    border : 2px solid #D9D9D9;
-    margin-top: 4px;
-    margin-right: 10px;
-    margin-top: 4px;
-    margin-left: 10px;
-    border-radius: 25px;
-    gap: 10px;
-
-}
-
-.filter_hype:hover{
-    background-color: #DEEBFF;
-}
-
-.filter_hype_text{
-    height: 20px;
-    width: 97px;
-    font-size: 17px;
-    font-weight: 700;
-}
 
 /****** infogroup_infobar***********/
 
@@ -378,7 +291,56 @@ a {
 
 /****** Hebergements ***********/
 .hebergements {
+    display: flex;
+    flex-direction: column;
     width: 65%;
+    gap: 30px;
+}
+
+
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3colonnes, chaque colonne prend 1 fraction de l'espace dispo*/
+    height: 208px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hebergements-cards .card {
+    width : 100%;  /****** taille des cartes ***********/
+    height: 208px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 4px;
+}
+
+.hebergements-cards .card-title {
+    margin: 8px 0 0 0;/* haut | droite | bas | gauche */
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 8px;
 }
 
 /****** Populaires ***********/
