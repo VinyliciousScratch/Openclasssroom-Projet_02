@@ -43,9 +43,10 @@
                         </p>
                     </form>
                 </div>
-                <div class = "research_button">
-                        <p class="research_button_text">Rechercher</p>
-                </div>
+                <button class = "research_button">
+                        <span class="research_button_text">Rechercher</span>
+                        <i class="fa-solid fa-magnifying-glass magnifying_glass"></i>
+                </button>
 
             </div>
             <ul class = "container_filter_bar">
@@ -80,7 +81,7 @@
             </ul>
             <div class="container_infobar">
                 <div class="border_info">
-                    <img src ="images/assets/Info.png" alt = "info" class = "border_info_I">
+                    <i class="fa-solid fa-info fa-xs"></i>
                 </div>
                 <p class="align_info_text">Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
@@ -196,7 +197,7 @@
                             </article>
                         </a>
                     </div>
-                    <a href="#"><h3>Afficher plus</h3></a>
+                    <a href="#"><h3 class ="no-margin">Afficher plus</h3></a>
                 </section>
                 <section class="populaires">
                     <div class="populaires-title">
@@ -263,12 +264,75 @@
                         </a>
                     </div>
                 </section>
-                <section>
-                    
+            </div>
+            <div class="activities-in-Marseille">
+                <h2 class="section-title">Hébergements à Marseille</h2>
+                <section class="activities-cards">
+                    <a href="#">
+                        <article class="card">
+                            <img src="./images/activites/reno-laithienne.jpg" alt="Vieux-Port">
+                            <div class="card-content">
+                                <p class= "euro">Vieux-Port</p>
+                            </div>
+                        </article>
+
+                    </a>
+                    <a href="#">
+                        <article class="card">
+                            <img src="./images/activites/paul-hermann.jpg" alt="Fort de Pomègues">
+                            <div class="card-content">
+                                <p class= "euro">Fort de Pomègues</p>
+                            </div>
+                        </article>
+
+                    </a>
+                    <a href="#">
+                        <article class="card">
+                            <img src="./images/activites/kilyan-sockalingum.jpg" alt="Parc national des Calanques">
+                            <div class="card-content">
+                                <p class= "euro">Parc national des Calanques</p>
+                            </div>
+                        </article>
+
+                    </a>
+                    <a href="#">
+                        <article class="card">
+                            <img src="./images/activites/florian-wehde.jpg" alt="Notre-Dame-de-la-Garde">
+                            <div class="card-content">
+                                <p class= "euro">Notre-Dame-de-la-Garde</p>
+                            </div>
+                        </article>
+
+                    </a>
                 </section>
             </div>
         </main>
-        <footer></footer>
+
+
+        <footer class="footer_container">                
+            <section>
+                <h3 class="footer_titles">À propos</h3>
+                <nav class="footer_nav_list">
+                    <a href="#" class="footer_hyperlink">Fonctionnement du site</a>
+                    <a href="#" class="footer_hyperlink">Conditions générales</a>
+                    <a href="#" class="footer_hyperlink">Données et confidentialité</a>
+                </nav>
+            </section>
+            <section>
+                <h3 class="footer_titles">Nos hébergements</h3>
+                <nav class="footer_nav_list">
+                    <a href="#" class="footer_hyperlink">Charte qualité</a>
+                    <a href="#" class="footer_hyperlink">Proposer votre hôtel</a>
+                </nav>
+            </section>
+            <section>
+                <h3 class="footer_titles">Assistance</h3>
+                <nav class="footer_nav_list">                    
+                    <a href="#" class="footer_hyperlink">Centre d’aide</a>
+                    <a href="#" class="footer_hyperlink">Nous contacter</a>
+                </nav>
+            </section>
+        </footer>
     </div>
 </body>
 

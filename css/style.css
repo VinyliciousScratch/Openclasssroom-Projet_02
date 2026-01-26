@@ -7,6 +7,8 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --border-color: #D9D9D9;
+    --neutral-color: #FFFFFF;
 }
 
 .fa-solid {
@@ -36,7 +38,7 @@ a {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--neutral-color);
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -61,6 +63,9 @@ a {
     color: var(--main-bg-color)
 }
 
+.no-margin{
+    margin: 0;
+}
 
 /****** Header ***********/
 
@@ -97,7 +102,7 @@ a {
 .button_header:hover{
     text-decoration: overline;   /* surligne*/
     text-decoration-thickness: 2px; /* taille de la ligne */
-    color: #0065FC; /* couleur */
+    color: var(--main-color); /* couleur */
 }
 
 
@@ -106,8 +111,9 @@ a {
 .container_infogroup{
     display: flex;
     flex-direction: column;
-    height: 340px; /* changé pour correspondre à la maquette*/
+    height: auto;
     gap :35px;
+    margin-bottom: 35px;  /* écart avec boîte d'hébergement */
 }
 
 
@@ -142,8 +148,13 @@ a {
     width: 377px;
     height: 49px;
     border-radius: 15px;
-    border: 1px solid #F2F2F2;
+    border: 1px solid var(--main-bg-color);
 }
+
+.magnifying_glass{
+    display: none;
+}
+
 
 .pin_map{
     display: flex;
@@ -153,7 +164,7 @@ a {
     height: 49px;
     border-top-left-radius : 15px ;
     border-bottom-left-radius: 15px;
-    background-color: #F2F2F2;
+    background-color: var(--main-bg-color);
 }
 
 .pin{
@@ -168,7 +179,8 @@ a {
     height: 49px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #0065FC;
+    background-color: var(--main-color);
+    border-style: none;
     gap: 10px;
 }
 
@@ -177,7 +189,7 @@ a {
     height: 21px;
     font-size: 18px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: var(--neutral-color);
 }
 
 .research_container{ /* Pour tout aligner*/
@@ -188,8 +200,6 @@ a {
     font-size: 18px ;
     font-weight: 700;
     border: none;
-    outline: none;
-    box-shadow: none;
 }
 
 /****** infogroup_filter_bar***********/
@@ -230,14 +240,15 @@ a {
     padding-bottom: 4px;
     padding-left: 19px;
     border-radius: 25px;
-    border : 2px solid #D9D9D9;
+    border : 2px solid var(--border-color);
     margin-top: 4px;
+    background-color:var(--neutral-color) ;
     gap: 10px;
 
 }
 
 .filter_button:hover{
-    background-color: #DEEBFF;
+    background-color: var(--filter-bg-color);
 }
 
 
@@ -245,7 +256,7 @@ a {
 
 .container_infobar{
     display: flex;
-    align-content: center;
+    align-items: center;
     height: 24px;
     gap: 10px;
 }
@@ -256,15 +267,9 @@ a {
     align-items: center;
     height: 24px;
     width: 24px;
-    border: 1px solid #D9D9D9 ;
+    border: 1px solid var(--border-color) ;
     border-radius : 50% ;
-    color: #0065FC;
-}
-
-.border_info_I{
-    display: flex;
-    height: 10px;
-    width: 4px;
+    color: var(--main-color);
 }
 
 .align_info_text{
@@ -289,6 +294,67 @@ a {
     box-sizing: border-box;
 }
 
+/*Footer*/
+.footer_container{
+    display: grid;
+    width: 100% ;
+    height: 163px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--main-bg-color);
+    padding-left: 20px;
+}
+
+.footer_titles{
+    margin-bottom: 15px;
+}
+
+.footer_nav_list{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 15px ;
+}
+
+/*.footer_nav_list a:hover{
+    color: #0065FC;
+}
+
+/******Activités à Marseille**********/
+.activities-in-Marseille{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap:30px
+}
+
+.activities-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.activities-cards .card {
+    width: 100%;
+    height: 439px;
+    padding: 0px;
+}
+
+.activities-cards img {
+    width: 100%;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+
+.activities-cards .card-content {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    margin-left: 19px;
+    margin-right: 19px;
+}
+
 /****** Hebergements ***********/
 .hebergements {
     display: flex;
@@ -301,7 +367,6 @@ a {
 .hebergements-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /*3colonnes, chaque colonne prend 1 fraction de l'espace dispo*/
-    height: 208px;
     flex-wrap: wrap;
     gap: 30px;
 }
@@ -431,4 +496,116 @@ a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+
+    .main-container {
+        padding: 0;
+        max-width: 375px; /*maintiens la largeur max à 375px*/
+    }
+
+    /****** Header ***********/
+
+    .logo_header {           /* Taille logo*/
+        width: 61.09px;
+        height: 19px;
+        align-items: center;
+    }
+
+    .container_header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo_container{
+        margin: 30px;
+    }
+
+    .container_header_button{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 35px;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .button_header{
+        display: flex;
+        justify-content: center; /* horizontal */
+        width: 100%;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .button_header:hover{
+        text-decoration: none;
+        border-color:var(--main-color) ;
+    }
+
+
+    /****** infogroup***********/
+
+    .container_infogroup{
+        align-items: center;
+        margin-bottom: 0;  /* écart avec boîte d'hébergement */
+    }
+
+
+    /****** infogroup_search_bar***********/
+
+    .container_search_bar{/*change la taille de la barre*/
+        width: 335px;
+
+    }
+    
+    .research_button{/*changer la taille du bouton et les bords*/
+        width: 49px;
+        height: 49px;
+        border-radius: 15px;
+    }
+
+    .magnifying_glass{/*Afficher la loupe*/
+        display: inline-block;
+        color:var(--neutral-color) ;
+    }
+
+    .research_button_text{/*effacer texte "rechercher"*/
+        display: none;
+    }
+
+    /****** infogroup_filter_bar***********/
+
+
+    .container_filter_bar{/*nouvelle config pour la barre de filtre*/
+        flex-wrap: wrap;/*active le retour à la ligne*/
+        justify-content: space-between;/*espace jusqu'au bord pour créer l'écart de 20px*/
+        width: 335px; /*redimensionne aux format mobile*/
+        height: 161px;
+        gap: 0px; /*à zero pour que ça ne saute pas de ligne en trop*/
+        
+    }
+    
+    .filter_text{
+        width: 375px; /*largeur max pour occuper la 1ère ligne complète*/
+        margin-top: 0px; /*écart entre search_bar et filtre correspondant à la maquette*/
+    }
+
+    .filter_button{
+        width: 162.5px; /*redimensionne aux format mobile*/
+
+    }
+
+
+    .filter_font_size{
+        font-size: 14px;
+    }
+
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
 }
+
