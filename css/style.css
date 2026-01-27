@@ -294,66 +294,8 @@ a {
     box-sizing: border-box;
 }
 
-/*Footer*/
-.footer_container{
-    display: grid;
-    width: 100% ;
-    height: 163px;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: var(--main-bg-color);
-    padding-left: 20px;
-}
 
-.footer_titles{
-    margin-bottom: 15px;
-}
 
-.footer_nav_list{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    gap: 15px ;
-}
-
-/*.footer_nav_list a:hover{
-    color: #0065FC;
-}
-
-/******Activités à Marseille**********/
-.activities-in-Marseille{
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
-    gap:30px
-}
-
-.activities-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.activities-cards .card {
-    width: 100%;
-    height: 439px;
-    padding: 0px;
-}
-
-.activities-cards img {
-    width: 100%;
-    height: 380px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    
-}
-
-.activities-cards .card-content {
-    display: flex;
-    box-sizing: border-box;
-    height: 100%;
-    margin-left: 19px;
-    margin-right: 19px;
-}
 
 /****** Hebergements ***********/
 .hebergements {
@@ -367,7 +309,6 @@ a {
 .hebergements-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /*3colonnes, chaque colonne prend 1 fraction de l'espace dispo*/
-    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -407,6 +348,11 @@ a {
 .hebergements-cards .card-rating {
     margin-bottom: 8px;
 }
+
+.plus-text{
+    font-size: 18px;
+}
+
 
 /****** Populaires ***********/
 .populaires {
@@ -452,8 +398,77 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/******Activités à Marseille**********/
+.activities-in-Marseille{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px 60px 30px;
+    gap:30px
+}
+
+.activities-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.activities-cards .card {
+    width: 100%;
+    height: 439px;
+    padding: 0px;
+}
+
+.activities-cards img {
+    width: 100%;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activities-cards .card-content {
+    display: flex;
+    margin-left: 19px;
+    margin-right: 19px;
+}
+
+.activities-cards-text{
+    display: flex;
+    min-height: 3em; /*Pour quand ça réduit de taille*/
+    font-size: 16px;
+    align-items: center;
+    margin-top: auto;
+}
 
 
+/*Footer*/
+.footer_container{
+    display: grid;
+    width: 100% ;
+    height: 163px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--main-bg-color);
+    padding-top: 20px;
+}
+
+.footer_titles{
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.footer_list{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 0px 0px 0px 20px;
+    width: fit-content;
+    gap: 15px ;
+}
+
+.footer_list a:hover{
+    color: #0065FC;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -461,6 +476,25 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+
+    .container_filter_bar{/*nouvelle config pour la barre de filtre*/
+        flex-wrap: wrap;/*active le retour à la ligne*/
+        height: auto;
+        width: 100%; /*redimensionne aux format mobile*/
+        gap: 0px; /*à zero pour que ça ne saute pas de ligne en trop*/        
+    }
+    
+    .filter_text{
+        width: 1024px; /*largeur max pour occuper la 1ère ligne complète*/
+        margin-top: 0px; /*écart entre search_bar et filtre correspondant à la maquette*/
+    }
+
+    .filter_button{
+        margin-right: 20px;
+    }
+
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -490,7 +524,21 @@ a {
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+
+
     }
+
+    .activities-cards img {
+        height: 200px;    
+    }
+
+    .activities-cards .card {
+        height: 270px;
+    }
+
+
+
+
 }
 
 /* Small devices (phones, less than 768px) */
@@ -499,7 +547,7 @@ a {
 
     .main-container {
         padding: 0;
-        max-width: 375px; /*maintiens la largeur max à 375px*/
+        
     }
 
     /****** Header ***********/
