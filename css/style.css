@@ -528,11 +528,11 @@ a {
 
     }
 
-    .activities-cards img {
+    .activities-cards img {                /*nouvelle hauteur de l'image*/
         height: 200px;    
     }
 
-    .activities-cards .card {
+    .activities-cards .card {/*nouvelle hauteur totale*/
         height: 270px;
     }
 
@@ -549,6 +549,9 @@ a {
         padding: 0;
         
     }
+    
+
+
 
     /****** Header ***********/
 
@@ -625,20 +628,18 @@ a {
 
     .container_filter_bar{/*nouvelle config pour la barre de filtre*/
         flex-wrap: wrap;/*active le retour à la ligne*/
-        justify-content: space-between;/*espace jusqu'au bord pour créer l'écart de 20px*/
-        width: 335px; /*redimensionne aux format mobile*/
-        height: 161px;
-        gap: 0px; /*à zero pour que ça ne saute pas de ligne en trop*/
-        
+        justify-content: space-between;   
+        max-width: 335px;/*taille maximum*/
+        height: 161px;/*redimensionne aux format mobile*/
     }
     
     .filter_text{
-        width: 375px; /*largeur max pour occuper la 1ère ligne complète*/
         margin-top: 0px; /*écart entre search_bar et filtre correspondant à la maquette*/
     }
 
     .filter_button{
         width: 162.5px; /*redimensionne aux format mobile*/
+        margin: 0;
 
     }
 
@@ -648,12 +649,107 @@ a {
     }
 
 
+
+    /*hebergements-and-populaires*/
+
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+        max-width: 375px;/*taille maximum*/;
+        margin: auto;
+
     }
 
     .hebergements-and-populaires section {
         border-radius: 0;
+        align-items: center;
+        padding-left: 20px; /*afin de coller au format mobile*/
+        padding-right: 20px; /*afin de coller au format mobile*/
     }
+
+    .hebergements-and-populaires section:nth-of-type(1) { /*changer la couleur du fond de "hébergement" en le sélectionnant via (1) , colonne inversée */
+        background-color: #FFFFFF;
+    }
+
+
+
+    /*populaires*/
+
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+
+
+    .populaires-cards a {  /*sinon la balise <a> bloque l'étirement*/
+        display: block;
+        width: 100%;
+    }
+
+
+
+    /*hebergements*/
+
+
+    .hebergements-cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .hebergements {
+        background-color: var(--neutral-color);
+        
+    }
+
+    /******Activités à Marseille**********/
+
+
+
+    .activities-in-Marseille{
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        margin: 0px auto 65px auto; /*écart + marge pour correspondre à l'espace sur la maquette*/
+        gap:30px
+    }
+
+
+    .activities-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+   
+    .activities-cards .card {
+        width: 100%;
+        height: 200px; /*Taille maquette*/
+    }
+
+    .activities-cards img {
+        width: 100%;
+        height: 141px; /*Taille maquette*/
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /*Footer*/
+
+    .footer_container{
+        display: flex;
+        flex-direction: column;
+        width: 375px ;
+        height: auto;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+
+
+
+
+
 }
 
