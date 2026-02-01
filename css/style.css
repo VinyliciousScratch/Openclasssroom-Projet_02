@@ -1,7 +1,15 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif ;
+    font-family: 'Raleway', sans-serif ;/*tous les éléments HTML*/
 }
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
 
 :root {
     --main-color: #0065FC;
@@ -24,7 +32,6 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
 }
 
 a {
@@ -42,7 +49,6 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    box-sizing: border-box;
 
 }
 
@@ -193,8 +199,6 @@ a {
 }
 
 .research_container{ /* Pour tout aligner*/
-    display: flex;
-    align-content: center;
     width: 147px;
     height: 21px;
     font-size: 18px ;
@@ -273,12 +277,8 @@ a {
 }
 
 .align_info_text{
-    display: flex;
-    align-items: center;
     font-size: 16px;
 }
-
-
 
 
 /****** Hebergements And Populaires ***********/
@@ -315,7 +315,6 @@ a {
 .hebergements-cards .card {
     width : 100%;  /****** taille des cartes ***********/
     height: 208px;
-    max-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -332,8 +331,7 @@ a {
     flex-direction: column;
     box-sizing: border-box;
     height: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 0 15px;
     gap: 4px;
 }
 
@@ -427,8 +425,7 @@ a {
 
 .activities-cards .card-content {
     display: flex;
-    margin-left: 19px;
-    margin-right: 19px;
+    margin: 0 19px;
 }
 
 .activities-cards-text{
@@ -546,23 +543,12 @@ a {
     /* ... */
 
     .main-container {
-        padding: 0;
-        
+        padding: 0;        
     }
-    
-
-
 
     /****** Header ***********/
 
-    .logo_header {           /* Taille logo*/
-        width: 61.09px;
-        height: 19px;
-        align-items: center;
-    }
-
     .container_header{
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -708,8 +694,6 @@ a {
 
 
     .activities-in-Marseille{
-        display: flex;
-        flex-direction: column;
         max-width: 375px;
         margin: 0px auto 65px auto; /*écart + marge pour correspondre à l'espace sur la maquette*/
         gap:30px
