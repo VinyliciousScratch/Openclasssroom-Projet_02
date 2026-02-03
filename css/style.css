@@ -546,6 +546,9 @@ a {
         padding: 0;        
     }
 
+    body {
+        margin: 0;
+    }
     /****** Header ***********/
 
     .container_header{
@@ -583,14 +586,17 @@ a {
 
     .container_infogroup{
         align-items: center;
-        margin-bottom: 0;  /* écart avec boîte d'hébergement */
+        margin: 16px 16px 0px 16px ;  /* écart avec boîte d'hébergement */
     }
 
+    .container_infogroup > :last-child{
+        margin-right: auto;
+    }
 
     /****** infogroup_search_bar***********/
 
     .container_search_bar{/*change la taille de la barre*/
-        width: 335px;
+        width: 100%;
 
     }
     
@@ -614,17 +620,23 @@ a {
 
     .container_filter_bar{/*nouvelle config pour la barre de filtre*/
         flex-wrap: wrap;/*active le retour à la ligne*/
-        justify-content: space-between;   
-        max-width: 335px;/*taille maximum*/
+        max-width: 100%;/*taille maximum*/
         height: 161px;/*redimensionne aux format mobile*/
+        gap: 20px;
     }
     
+
+    .container_filter_bar li {
+      flex: 1 1 calc(50% - 52px); 
+    }
+
+
     .filter_text{
-        margin-top: 0px; /*écart entre search_bar et filtre correspondant à la maquette*/
+        margin: 0px; /*écart entre search_bar et filtre correspondant à la maquette*/
     }
 
     .filter_button{
-        width: 162.5px; /*redimensionne aux format mobile*/
+        width: 100%; /*redimensionne aux format mobile*/
         margin: 0;
 
     }
@@ -640,8 +652,7 @@ a {
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
-        max-width: 375px;/*taille maximum*/;
-        margin: auto;
+        max-width: 100%;/*taille maximum*/;
 
     }
 
@@ -686,16 +697,35 @@ a {
 
     .hebergements {
         background-color: var(--neutral-color);
+        margin-bottom: 35px;
         
     }
+
+    .hebergements > :first-child {
+        align-self: flex-start;
+        
+    }
+
+    .hebergements > :last-child {
+        align-self: flex-start;
+        
+    }
+
+
+
+
+
+
+
+
 
     /******Activités à Marseille**********/
 
 
 
     .activities-in-Marseille{
-        max-width: 375px;
-        margin: 0px auto 65px auto; /*écart + marge pour correspondre à l'espace sur la maquette*/
+        max-width: 100%;
+        margin: 0px 20px 65px 20px; /*écart + marge pour correspondre à l'espace sur la maquette*/
         gap:30px
     }
 
@@ -724,9 +754,9 @@ a {
     .footer_container{
         display: flex;
         flex-direction: column;
-        width: 375px ;
+        width: 100% ;
+        gap: 40px;
         height: auto;
-        margin: auto;
         padding-top: 20px;
     }
 
