@@ -434,7 +434,7 @@ a {
 
 .activities-cards-text{
     display: flex;
-    min-height: 3em;                                                                                                            /*Pour quand ça réduit de taille*/
+    min-height: 3em;                                                                                                            
     font-size: 16px;
     align-items: center;
     margin-top: auto;
